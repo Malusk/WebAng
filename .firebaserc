@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "fudpdf": {
+      "hosting": {
+        "Web": [
+          "fudpdf"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "fudpdf"
+  }
+}
