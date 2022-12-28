@@ -1,14 +1,24 @@
 import { Component, NgModule } from '@angular/core';
-import { Router } from '@angular/router';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+
 @Component({
   selector: 'app-fud-pdf',
   templateUrl: './fud-pdf.component.html',
   styleUrls: ['./fud-pdf.component.css'],
 })
+
 export class FudPDFComponent {
-  constructor(private router: Router) {
-  }
-  clickButton(path: string) {
-    this.router.navigate([path]);
-    }
+email: any;
+password: any;
+htmlStr: string = 'Plain Text Example &amp; <strong>Bold Text Example</strong>';
+constructor(private afAuth: AngularFireAuth) {}
+login(email: string, password: string) {
+  this.afAuth.signInWithEmailAndPassword(email, password)
+    .then(() => {
+      console.log("yay");
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+}
 }

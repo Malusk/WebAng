@@ -4,7 +4,7 @@ import { FudPDFComponent } from './fud-pdf/fud-pdf.component';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: 'fud-pdf/fud-pdf.component.html', component: FudPDFComponent }
+  { path: 'login', component: FudPDFComponent }
 ]
 
 @NgModule({

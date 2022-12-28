@@ -9,10 +9,10 @@ import { Router } from '@angular/router';
 })
 
 export class AppComponent {
+  title = "Wang";
   constructor(private router: Router) {
       }
       clickButton(path: string) {
         this.router.navigate([path]);
         }
-        title="Web"
   }
