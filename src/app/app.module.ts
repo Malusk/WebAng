@@ -16,10 +16,13 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { ErrormessageComponent } from './errormessage/errormessage.component';
 @NgModule({
   declarations: [
     AppComponent,
-    FudPDFComponent
+    FudPDFComponent,
+    ErrormessageComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,8 @@ import { MatInputModule } from '@angular/material/input';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent],
