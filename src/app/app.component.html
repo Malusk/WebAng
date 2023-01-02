@@ -1,4 +1,6 @@
-<h1>{{title}}</h1>
-  <button class="link" (click)="clickButton('login')">About</button>
-<p>why</p>
+<mat-toolbar color="secondary">
+    <button mat-button routerLink="login" routerLinkActive="active">Login</button>
+    <button mat-button routerLink="form" routerLinkActive="active">Form</button>
+    <button mat-button routerLink="fill" routerLinkActive="active">Fill</button>
+  </mat-toolbar>
 <router-outlet></router-outlet>

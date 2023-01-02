@@ -1,0 +1,19 @@
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+form > * {
+  width: 300px;
+  margin: 10px;
+}
+mat-accordion{
+  display: block;
+  height: 50px;
+}
+h1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

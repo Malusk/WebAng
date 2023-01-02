@@ -1,0 +1,24 @@
+<table>
+  <tr>
+    <th>Tipo de Victima</th>
+    <th>Nombres</th>
+    <th>Primer Apellido</th>
+    <th>Segundo Appellido</th>
+    <th>Sexo</th>
+    <th>CURP</th>
+    <th>Nacionalidad</th>
+    <th>Telefono</th>
+    <th>Direccion</th>
+  </tr>
+  <tr *ngFor="let message of messages">
+    <td>{{ message.Victima }}</td>
+    <td>{{ message.nombres }}</td>
+    <td>{{ message.primer_apellido }}</td>
+    <td>{{ message.segundo_apellido }}</td>
+    <td>{{ message.sexo }}</td>
+    <td>{{ message.curp }}</td>
+    <td>{{ message.nacionalidad }}</td>
+    <td>{{ message.phone }}</td>
+    <td>{{ message.calle + " " + message.num_ext + " " + message.num_int + " " + message.colonia + " " + message.delegacion + " " + message.zip + " " + message.estado}}</td>
+  </tr>
+</table>
