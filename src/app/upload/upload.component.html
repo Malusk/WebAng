@@ -1,0 +1,29 @@
+<div class="left">
+<table>
+  <tr>
+    <th>Tipo de Victima</th>
+    <th>Nombres</th>
+    <th>Primer Apellido</th>
+    <th>Segundo Appellido</th>
+    <th>Sexo</th>
+    <th>CURP</th>
+    <th>Nacionalidad</th>
+    <th>Telefono</th>
+    <th>Direccion</th>
+  </tr>
+  <tr>
+    <td>{{ entry.Victima }}</td>
+    <td>{{ entry.nombres }}</td>
+    <td>{{ entry.primer_apellido }}</td>
+    <td>{{ entry.segundo_apellido }}</td>
+    <td>{{ entry.sexo }}</td>
+    <td>{{ entry.curp }}</td>
+    <td>{{ entry.nacionalidad }}</td>
+    <td>{{ entry.phone }}</td>
+    <td>{{ entry.calle + " " + entry.num_ext + " " + entry.num_int + " " + entry.colonia + " " + entry.delegacion + " " + entry.zip + " " + entry.estado}}</td>
+  </tr>
+</table>
+</div>
+<div class="pdf-container">
+  <embed src="/assets/FUD 2017 rellenable.pdf" type="application/pdf"  width="100%" height="800">
+</div>

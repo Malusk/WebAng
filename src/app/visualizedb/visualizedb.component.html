@@ -10,7 +10,7 @@
     <th>Telefono</th>
     <th>Direccion</th>
   </tr>
-  <tr *ngFor="let message of messages">
+  <tr *ngFor="let message of messages" (click)="selectEntry(message)">
     <td>{{ message.Victima }}</td>
     <td>{{ message.nombres }}</td>
     <td>{{ message.primer_apellido }}</td>
@@ -22,3 +22,5 @@
     <td>{{ message.calle + " " + message.num_ext + " " + message.num_int + " " + message.colonia + " " + message.delegacion + " " + message.zip + " " + message.estado}}</td>
   </tr>
 </table>
+
+<router-outlet></router-outlet>

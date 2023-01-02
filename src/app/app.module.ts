@@ -28,16 +28,25 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { VisualizedbComponent } from './visualizedb/visualizedb.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { AuthService } from './auth.service';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { UploadComponent } from './upload/upload.component';
+import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
+import { FilterPipe } from '../FilterPipe';
 @NgModule({
   declarations: [
     AppComponent,
     FudPDFComponent,
     ErrormessageComponent,
     FormComponent,
-    VisualizedbComponent
+    VisualizedbComponent,
+    UploadComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
+    MatSidenavModule,
+    NgxExtendedPdfViewerModule,
     MatToolbarModule,
     MatDatepickerModule,
     MatExpansionModule,
@@ -59,7 +68,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatInputModule,
     MatDialogModule
   ],
-  providers: [AngularFirestore],
+  providers: [AngularFirestore, AuthService],
   bootstrap: [AppComponent],
   exports: [
     RouterModule

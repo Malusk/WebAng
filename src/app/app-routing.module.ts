@@ -5,10 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { FormComponent } from './form/form.component';
 import { VisualizedbComponent } from './visualizedb/visualizedb.component';
 import { AuthService } from './auth.service';
+import { UploadComponent } from './upload/upload.component';
 const routes: Routes = [
   { path: 'login', component: FudPDFComponent },
   { path: 'form', component: FormComponent},
-  { path: 'fill', component: VisualizedbComponent, canActivate : [AuthService]}
+  { path: 'fill', component: VisualizedbComponent, canActivate : [AuthService]},
+  { path : 'pdf', component: UploadComponent}
 ]
 
 @NgModule({

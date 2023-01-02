@@ -1,6 +1,8 @@
 table {
   border-collapse: collapse;
   width: 100%;
+  overflow: auto;
+  max-height: 200px;
 }
 
 th, td {
@@ -14,5 +16,10 @@ tr:nth-child(even) {
 
 th {
   background-color: #4527A0;
+  color: white;
+}
+tr:active {
+  /* Style for active list items */
+  background-color: #82A027;
   color: white;
 }
