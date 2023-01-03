@@ -33,6 +33,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { UploadComponent } from './upload/upload.component';
 import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 import { FilterPipe } from '../FilterPipe';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+import { FormSubmittedComponent } from './form-submitted/form-submitted.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +43,9 @@ import { FilterPipe } from '../FilterPipe';
     FormComponent,
     VisualizedbComponent,
     UploadComponent,
-    FilterPipe
+    FilterPipe,
+    ConfirmDialogComponent,
+    FormSubmittedComponent,
   ],
   imports: [
     BrowserModule,

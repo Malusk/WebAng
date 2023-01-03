@@ -13,7 +13,6 @@ import { Router } from '@angular/router';
 export class FudPDFComponent {
 email: any;
 password: any;
-htmlStr: string = 'Plain Text Example &amp; <strong>Bold Text Example</strong>';
 constructor(private afAuth: AngularFireAuth, private dialog: MatDialog, private router: Router) {}
 login(email: string, password: string) {
   this.afAuth.signInWithEmailAndPassword(email, password)
