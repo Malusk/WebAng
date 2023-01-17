@@ -25,5 +25,7 @@
 </table>
 </div>
 <div class="pdf-container">
-  <embed src="/assets/FUD 2017 rellenable.pdf" type="application/pdf"  width="100%" height="800">
+  <embed src="/assets/FUD 2017 rellenable.pdf" type="application/pdf"  width="100%" height="700">
 </div>
+  <button type="button" mat-raised-button (click)="fileInput.click()">Choose File</button>
+  <input hidden (change)="uploadPDF($event)" #fileInput type="file" id="file">

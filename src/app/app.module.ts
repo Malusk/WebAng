@@ -35,6 +35,9 @@ import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 import { FilterPipe } from '../FilterPipe';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 import { FormSubmittedComponent } from './form-submitted/form-submitted.component';
+import { PDFSubmitComponent } from './pdfsubmit/pdfsubmit.component';
+import { MatCardModule } from '@angular/material/card';
+import { WelcomeComponent } from './welcome/welcome.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,9 +49,12 @@ import { FormSubmittedComponent } from './form-submitted/form-submitted.componen
     FilterPipe,
     ConfirmDialogComponent,
     FormSubmittedComponent,
+    PDFSubmitComponent,
+    WelcomeComponent,
   ],
   imports: [
     BrowserModule,
+    MatCardModule,
     MatSidenavModule,
     NgxExtendedPdfViewerModule,
     MatToolbarModule,

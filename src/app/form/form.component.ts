@@ -15,6 +15,8 @@ import 'firebase/compat/firestore';
 export class FormComponent {
   states = ['Aguascalientes', 'Baja California', 'Baja California Sur', 'Campeche', 'Chiapas', 'Chihuahua', 'Coahuila', 'Colima', 'Durango', 'Guanajuato', 'Guerrero', 'Hidalgo', 'Jalisco', 'Mexico', 'Michoacan', 'Morelos', 'Nayarit', 'Nuevo Leon', 'Oaxaca', 'Puebla', 'Queretaro', 'Quintana Roo', 'San Luis Potosi', 'Sinaloa', 'Sonora', 'Tabasco', 'Tamaulipas', 'Tlaxcala', 'Veracruz', 'Yucatan', 'Zacatecas'];
   form: FormGroup;
+  searchTerm: any;
+  appointments = {date: 'none', time: 'none', location: 'none'};
   constructor(private afs: AngularFirestore, private fb: FormBuilder, public dialog: MatDialog) {
     this.form = this.fb.group({
       nombres: new FormControl(''),
@@ -54,5 +56,22 @@ export class FormComponent {
         console.log("Nope");
       }
     });
+  }
+  ngOnInit()
+  {
+    firebase.database().ref('appointments').orderByChild('userId').equalTo('2ve1hrqj4vj').once("value", function(snapshot) {
+      console.log(snapshot.val());
+    });
+  }
+  search() {
+    // get a reference to the appointments node
+    const appointmentsRef = firebase.database().ref('appointments');
+    // use the orderByChild() and equalTo() methods to filter the appointments by userId
+    appointmentsRef.orderByChild("userId").equalTo(this.searchTerm)
+      .on("value", (snapshot) => {
+        console.log(snapshot.val());
+        snapshot.forEach(childSnapshot => {
+        this.appointments = childSnapshot.val();});
+      });
   }
 }

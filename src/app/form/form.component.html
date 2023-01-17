@@ -1,5 +1,7 @@
 <body>
-<h1 mat-h1>Preliminary Registration Form</h1>
+<mat-toolbar color="primary">
+  <span>Preliminary Registration Form</span>
+</mat-toolbar>
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <mat-form-field>
     <mat-label>Tipo de Victima</mat-label>
@@ -112,3 +114,19 @@
   <button mat-raised-button type="submit">Submit</button>
 </form>
 </body>
+
+<input type="text" [(ngModel)]="searchTerm" placeholder="Enter userId">
+<button (click)="search()">Search</button>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Location</th>
+  </tr>
+  <tr>
+    <td>{{appointments.date}}</td>
+    <td>{{appointments.time}}</td>
+    <td>{{appointments.location}}</td>
+  </tr>
+</table>
